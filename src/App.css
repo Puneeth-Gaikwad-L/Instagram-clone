@@ -8,12 +8,11 @@ body {
   overflow-x: hidden;
 }
 
-nav{
-  /* background-color: red; */
-  background-color: #404040;
+nav {
+  background: linear-gradient(45deg, #333333, #404040);
   height: 70px;
-  font-size: 34px;
-  padding-inline: 50px;
+  font-size: 28px;
+  padding-inline: 40px;
   font-weight: 700;
   color: #fff;
   position: sticky;
@@ -28,118 +27,106 @@ nav{
   width: 100vw;
   height: 100vh;
   background-color: #000;
-  /* background-color: #404040; */
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
-.form>h1{
-  font-size: 54px;
+.form>h1 {
+  font-size: 60px;
 }
 
 .form>form {
   height: fit-content;
-  width: 30%;
-  background-color: red;
+  width: 40%;
+  background: linear-gradient(315deg, #2f2f2f, #404040);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px 10px;
-  gap: 5px;
-
-  border-radius: 50px;
-  background: linear-gradient(315deg, #3a3a3a74, #303030);
+  padding: 60px 20px;
+  gap: 10px;
+  border-radius: 30px;
 }
 
 .form>form>input {
-  width: 90%;
-  height: 35px;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  width: 95%;
+  height: 40px;
+  font-family: "Segoe UI", sans-serif;
   font-weight: 500;
-  font-size: .8vw;
+  font-size: 1rem;
   color: #fff;
-  background-color: rgb(28,28,30);
-  box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
-  border-radius: 0.4vw;
+  background-color: rgb(28, 28, 30);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5), 0 0 0 3px transparent;
+  border-radius: 8px;
   border: none;
   outline: none;
-  padding: 0.4vw;
-  transition: .4s;
+  padding: 10px;
+  transition: box-shadow 0.4s;
 }
 
 .form>form>input:hover {
-  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+  box-shadow: 0 0 0 3px rgba(135, 207, 235, 0.3);
 }
 
 .form>form>input:focus {
-  box-shadow: 0 0 0 .15vw skyblue;
+  box-shadow: 0 0 0 3px skyblue;
 }
 
 .btn {
-  width: 6.5em;
-  height: 2.3em;
+  width: 7em;
+  height: 2.5em;
   background: black;
   color: white;
   border: none;
-  border-radius: 0.625em;
-  font-size: 20px;
+  border-radius: 12px;
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
   position: relative;
   z-index: 1;
   overflow: hidden;
- }
- 
- .btn:hover {
+}
+
+.btn:hover {
   color: black;
- }
- 
- .btn:after {
+}
+
+.btn:after {
   content: "";
   background: white;
   position: absolute;
   z-index: -1;
-  left: -20%;
-  right: -20%;
+  left: -30%;
+  right: -30%;
   top: 0;
   bottom: 0;
   transform: skewX(-45deg) scale(0, 1);
   transition: all 0.5s;
- }
- 
- .btn:hover:after {
+}
+
+.btn:hover:after {
   transform: skewX(-45deg) scale(1, 1);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
- }
+}
 
- span{
-  color: aqua;
- }
-
- span:hover{
-  cursor: pointer;
- }
-
- .dashboard{
+.dashboard {
   background-color: #000;
   width: 100vw;
   height: 100vh;
   color: #fff;
- }
+}
 
- .welcome{
+.welcome {
   display: flex;
   align-items: center;
   justify-content: space-around;
   overflow: hidden;
- }
- .welcome>h3{
+}
+
+.welcome>h3 {
   font-weight: 300;
   text-align: center;
- }
+}
