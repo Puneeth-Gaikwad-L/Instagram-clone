@@ -51,9 +51,12 @@ const Signup = () => {
         }
     }
 
+    function redirectToSignIn() {
+        navigate("/")
+    }
+
     return (
         <div className="form">
-            <h1>Signup</h1>
             <form onSubmit={implementSignup}>
                 <input type="text" placeholder="Name" onChange={updateUser} name="name" value={user.name}/>
                 <br />
@@ -63,8 +66,9 @@ const Signup = () => {
                 <br />
                 <input type="password" placeholder="Confirm Password" onChange={updateUser} name="confirmPassword"value={user.confirmPassword}/>
                 <br />
-                <button className="btn" type="submit">Submit</button>
+                <button className="btn" type="submit">Signup</button>
             </form>
+            <p>have an account ? <span onClick={redirectToSignIn}>Login</span></p>
         </div>
     )
 }
