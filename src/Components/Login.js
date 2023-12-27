@@ -34,7 +34,6 @@ const Login = () => {
             console.log(response.data.data.token);
             setToken(response.data.data.token);
             setUser({ email: "", password: "" });
-            alert("login successful")
             setTimeout(() => {
                 navigate("/dashboard")
             }, 2000);
