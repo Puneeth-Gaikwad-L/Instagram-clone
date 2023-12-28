@@ -45,7 +45,7 @@ const Signup = () => {
             setUser({ name: "", email: "", password: "", confirmPassword: "" })
             setTimeout(() => {
                 navigate("/dashboard")
-            }, 2000);
+            }, 1000);
         } catch (error) {
             console.error(error.response.data.message)
         }

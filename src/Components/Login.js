@@ -33,10 +33,14 @@ const Login = () => {
             setMessage(response.data.message)
             console.log(response.data.data.token);
             setToken(response.data.data.token);
+            // save token to local storage
+            let jsonToken = JSON.stringify(response.data.data.token)
+            localStorage.setItem("token", jsonToken);
+
             setUser({ email: "", password: "" });
             setTimeout(() => {
                 navigate("/dashboard")
-            }, 2000);
+            }, 1000);
         } catch (error) {
             console.error(error)
         }
