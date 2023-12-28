@@ -17,7 +17,9 @@ const Dashboard = () => {
 
     console.log(token);
 
-    console.log(feed);
+    useEffect(() => {
+        console.log(feed);
+    })
 
 
     useEffect(() => {
@@ -46,6 +48,7 @@ const Dashboard = () => {
                 console.log(response.data.data.message);
                 setJoke(response.data.data.message)
                 setName(response.data.data.user.name);
+                setFeed(previous => [...previous, joke])
             })
             .catch(err => console.error(err))
     }
@@ -67,15 +70,28 @@ const Dashboard = () => {
         }
     }
 
+    function generateFeed() {
+        getJokes();
+    }
+
+    // const feedItems = feed.map(item => 
+    //     <p>{ joke }</p>
+    //     )
+
     return (
         <div className="dashboard">
             <div className="welcome"><h3>Welcome <span className="dashboard-name">{name}</span></h3>
                 <button className="btn" onClick={logOutImpl}>Logout</button>
             </div>
-            <div className="feed">
-                <p>{ joke }</p>
+            <div className="feed">{
+
+                feed.map(item => (
+                    item != "" ? <p>{ item }</p> : <></>
+                ))
+            }
+                
             </div>
-            <button className="btn">feed</button>
+            <button className="btn" onClick={generateFeed}>feed</button>
         </div>
     )
 }

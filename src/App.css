@@ -25,9 +25,8 @@ body {
 }
 
 .form>form {
-  width: 300px;
-  height: auto;
-  aspect-ratio: 16/9;
+  width: 30%;
+  height: fit-content;
   background-color: red;
   display: flex;
   flex-direction: column;
@@ -159,4 +158,5 @@ span:hover {
   background: #000000;
   border: 1px solid rgba(130, 130, 130, 0.454);
   text-align: center;
+  margin-top: 20px;
 }
